@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Hind Madurai;
+    src: url(../fonts/Hind_Madurai/HindMadurai-SemiBold.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #F2CEDA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0px 200px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+    color: #150101;
+}
+
+li:hover {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.58px;
+    text-align: left;
+    color: #D23166;
+}
+
+header img {
+    width: 79px;
+    height: 79px;
+}
+
+@mixin btn($bg_color, $w, $h, $mt) {
+    background: $bg_color;
+    width: $w ;
+    height: $h ;
+    margin-top: $mt;
+    border: 1px solid transparent;
+    color: white;
+    font-family: Hind Madurai;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.08px;
+    text-align: center;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darkorange;
+        color: red;
+        transition: .5s;
+        border-radius: 14px;
+    }
+}
+
+header button {
+    @include btn(#D23166, 165px, 50px)
+}
+
+
+
+main {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 150px 200px;
+    background-color: #F2CEDA;
+}
+
+.box h5 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color:
+        #0F0101;
+}
+
+.box h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 57.33px;
+    font-weight: 400;
+    line-height: 69.08px;
+    text-align: left;
+    padding-right: 350px;
+    padding-top: 10px;
+}
+
+.box p {
+    font-family: Hind Madurai;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #0F0101;
+    padding-right: 410px;
+    padding-top: 30px;
+}
+
+.box button {
+    @include btn(#D23166, 165px, 50px, )
+}
